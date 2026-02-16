@@ -12,6 +12,9 @@
 }
 
 .day-btn-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border-radius: 60px;
     background-color: #104277;
     padding-inline: 80px;
