@@ -1,3 +1,7 @@
+body {
+    background-color: #f2f2f2;
+}
+
 .head-h1 {
     display: flex;
     justify-content: center;
@@ -36,7 +40,7 @@
     height: 25px;
     border-radius: 50%;
     background-color: #144174;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .main-grid {
@@ -53,4 +57,25 @@
     height: 730px;
     margin-top: -690px;
     z-index: -100;
+}
+
+.right-masage {
+    width: 150px;
+    background-color: #fff;
+    padding-left: 10px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.right-masage::before {
+    content: "";
+    width: 12px;
+    height: 118px;
+    background-color: #eb5c75;
+    position: absolute;
+    display: inline-block;
+    z-index: 200;
+    margin-left: -16px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
