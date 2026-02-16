@@ -60,6 +60,9 @@ body {
 }
 
 .right-masage {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     width: 150px;
     background-color: #fff;
     padding-left: 10px;
@@ -70,7 +73,7 @@ body {
 .right-masage::before {
     content: "";
     width: 12px;
-    height: 118px;
+    height: 150px;
     background-color: #eb5c75;
     position: absolute;
     display: inline-block;
@@ -78,4 +81,28 @@ body {
     margin-left: -16px;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+}
+
+.left-masage {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 150px;
+    background-color: #fff;
+    padding-right: 10px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.left-masage::after {
+    content: "";
+    width: 12px;
+    height: 150px;
+    background-color: #eb5c75;
+    position: absolute;
+    display: inline-block;
+    z-index: 200;
+    margin-right: -16px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
