@@ -1,4 +1,4 @@
-.class {
-    width: 100px;
-    height: 100px;
+.head-h1 {
+    display: flex;
+    justify-content: centr;
 }
