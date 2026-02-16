@@ -31,18 +31,26 @@
     background-color: #4690ee;
 }
 
+.dot-dark-blue {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #144174;
+    margin-bottom: 30px;
+}
+
 .main-grid {
     display: grid;
     grid-template-columns: 1fr 25px 1fr;
     align-items: center;
+    margin-top: 20px;
     gap: 10px;
 }
 
 .line-grey {
-    display: flex;
-    justify-content: center;
     background-color: #144174;
-    width: 5px;
-    height: 100px;
-    margin-top: -90px;
+    width: 6px;
+    height: 730px;
+    margin-top: -690px;
+    z-index: -100;
 }
