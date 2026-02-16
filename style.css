@@ -1,4 +1,21 @@
 .head-h1 {
     display: flex;
-    justify-content: centr;
+    justify-content: center;
+    text-align: center;
+    background-color: #e65d72;
+    border-radius: 25px;
+    padding-inline: 50px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #fff;
+    z-index: 100;
+}
+
+.day-btn-div {
+    border-radius: 60px;
+    background-color: #104277;
+    padding-inline: 80px;
+    padding-top: 150px;
+    padding-bottom: 40px;
+    margin-top: -10px;
 }
