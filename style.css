@@ -33,6 +33,7 @@
 
 .main-grid {
     display: grid;
-    grid-template-columns: 1fr 40px 1fr;
+    grid-template-columns: 1fr 25px 1fr;
     align-items: center;
+    gap: 30px;
 }
