@@ -54,8 +54,8 @@ body {
 .line-grey {
     background-color: #144174;
     width: 6px;
-    height: 730px;
-    margin-top: -690px;
+    height: 870px;
+    margin-top: -840px;
     z-index: -100;
 }
 
