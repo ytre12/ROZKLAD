@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
 body {
     background-color: #f2f2f2;
+    font-family: "Nunito";
 }
 
 .head-h1 {
@@ -105,4 +108,11 @@ body {
     margin-right: -16px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+}
+
+.les-num {
+    font-size: 26px;
+    font-weight: 800;
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
