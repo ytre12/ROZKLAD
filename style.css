@@ -168,7 +168,7 @@ body {
 .btn-container {
     display: flex;
     justify-content: center;
-    margin-block: 30px;
+    margin-block: 20px;
     gap: 25px;
 }
 

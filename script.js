@@ -1,1 +1,16 @@
-const btnMonday = document.getElementById("");
+const btnMonday = document.getElementById("btn-mon");
+const btnThusday = document.getElementById("btn-thu");
+
+const arr = [
+  [
+    ["Вільно", ""],
+    ["Виробничі процеси та обладнання об'єктів автоматизації", "124 аудиторія"],
+    ["Основи інтелектуальної власносі", "243 аудиторія"],
+    ["Теоритична та прикладна механіка", "279 аудиторія"],
+    ["Вільно", ""],
+  ],
+  [],
+  [],
+  [],
+  [],
+];
