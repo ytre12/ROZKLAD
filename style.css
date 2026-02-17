@@ -172,5 +172,13 @@ body {
     gap: 25px;
 }
 
-.btn-day {
+button {
+    padding: 10px;
+    color: #cbcbcb;
+    background-color: #144174;
+    border-style: solid;
+    border-color: #eb5c75;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
 }
