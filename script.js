@@ -1,5 +1,8 @@
 const btnMonday = document.getElementById("btn-mon");
-const btnThusday = document.getElementById("btn-thu");
+const btnTuesday = document.getElementById("btn-tue");
+const btnWednesday = document.getElementById("btn-wed");
+const btnThursday = document.getElementById("btn-thu");
+const btnFridey = document.getElementById("btn-fri");
 
 const lesonName1 = document.querySelector("#leson-1");
 const lesonName2 = document.querySelector("#leson-2");
@@ -36,9 +39,27 @@ const textArr = [
     ["Вільно", "..."],
     ["Вільно", "..."],
   ],
-  [],
-  [],
-  [],
+  [
+    ["Вільно", "..."],
+    ["Вільно", "..."],
+    ["Вільно", "..."],
+    ["Вільно", "..."],
+    ["Вільно", "..."],
+  ],
+  [
+    ["Вільно", "..."],
+    ["Основи веб-технологій", "124 аудиторія"],
+    ["Тезнологія проектної роботи", "131 аудиторія"],
+    ["Виробничі процеси та обладнання об'єктів автоматизації", "241 аудиторія"],
+    ["Теоритична та прикладна механіка", "306 аудиторія"],
+  ],
+  [
+    ["Вільно", "..."],
+    ["Числові методи та комп'ютерне моделювання", "131 аудиторія"],
+    ["Числові методи та комп'ютерне моделювання", "131 аудиторія"],
+    ["Архітектура комп'ютерних систем та мереж", "243 аудиторія"],
+    ["Архітектура комп'ютерних систем та мереж", "243 аудиторія"],
+  ],
 ];
 
 const addNewContent = (dayNum) => {
@@ -49,4 +70,7 @@ const addNewContent = (dayNum) => {
 };
 
 btnMonday.addEventListener("click", () => addNewContent(0));
-btnThusday.addEventListener("click", () => addNewContent(1));
+btnTuesday.addEventListener("click", () => addNewContent(1));
+btnWednesday.addEventListener("click", () => addNewContent(2));
+btnThursday.addEventListener("click", () => addNewContent(3));
+btnFridey.addEventListener("click", () => addNewContent(4));
