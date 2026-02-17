@@ -118,7 +118,19 @@ body {
 }
 
 .p-leson-name {
+    height: 55px;
     font-size: 13px;
     font-weight: 700;
     margin: 0px;
+}
+
+.p-aditor-num {
+    font-size: 15px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 9px;
+}
+
+.left-text {
+    text-align: right;
 }
