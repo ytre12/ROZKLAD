@@ -26,9 +26,9 @@ body {
     border-radius: 60px;
     background-color: #104277;
     padding-inline: 70px;
-    padding-top: 110px;
-    padding-bottom: 40px;
-    margin-top: -130px;
+    padding-top: 130px;
+    padding-bottom: 20px;
+    margin-top: -150px;
 }
 
 .dot-blue {
@@ -71,6 +71,7 @@ body {
     padding-left: 10px;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
+    box-shadow: 2px 0px 5cap #cbcbcb;
 }
 
 .right-masage::before {
@@ -95,6 +96,7 @@ body {
     padding-right: 10px;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+    box-shadow: -2px 0px 5cap #cbcbcb;
 }
 
 .left-masage::after {
@@ -133,4 +135,16 @@ body {
 
 .left-text {
     text-align: right;
+}
+
+.cube-end {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    margin-bottom: -150px;
+    background-color: #144174;
 }
