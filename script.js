@@ -17,6 +17,21 @@ const audNum4 = document.querySelector("#leson-aud-4");
 const audNum5 = document.querySelector("#leson-aud-5");
 
 const timeElement = document.querySelector("#time");
+const timeStatus = document.querySelector("#time-status");
+
+const timerOfLesons = [
+  [0, "До почтаку пари", 28800],
+  [28800, "Пара почалась", 4800],
+  [33600, "Перерва", 1200],
+  [34800, "Пара почалась", 4800],
+  [39600, "Перерва", 1200],
+  [40800, "Пара почалась", 4800],
+  [45600, "Перерва", 1200],
+  [46800, "Пара почалась", 4800],
+  [51600, "Перерва", 1200],
+  [52800, "Пара почалась", 4800],
+  [57600, "До наступної пари", 86400],
+];
 
 const domElemArr = [
   [lesonName1, audNum1],
@@ -70,11 +85,51 @@ const timeNowSeconds = () => {
   const secondsOfStart =
     now.getHours() * 60 * 60 + now.getMinutes() * 60 + now.getSeconds();
   console.log(`Seconds now: ${secondsOfStart}`);
+  return secondsOfStart;
 };
 
 const timeNow = () => {
   const now = new Date();
   timeElement.textContent = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+};
+
+const changeTimeToLesson = () => {
+  const timeNow = timeNowSeconds();
+
+  let found = false;
+
+  for (let i = 0; i < timerOfLesons.length - 1; i++) {
+    const end = timerOfLesons[i][0] + timerOfLesons[i][2];
+
+    if (timeNow > timerOfLesons[i][0] && timeNow < end) {
+      let secondTime = end - timeNow;
+
+      let hours = Math.floor(secondTime / 3600);
+      secondTime = secondTime % 3600;
+      let minuts = Math.floor(secondTime / 60);
+      let seconds = secondTime % 60;
+
+      const pad = (num) => String(num).padStart(2, "0");
+
+      timeElement.textContent = `${pad(hours)}:${pad(minuts)}:${pad(seconds)}`;
+      timeStatus.textContent = timerOfLesons[i][1];
+      found = true;
+      break;
+    }
+  }
+
+  if (!found) {
+    let secondTime = 115200 - timeNow;
+    let hours = Math.floor(secondTime / 3600);
+    secondTime = secondTime % 3600;
+    let minuts = Math.floor(secondTime / 60);
+    let seconds = secondTime % 60;
+
+    const pad = (num) => String(num).padStart(2, "0");
+
+    timeElement.textContent = `${pad(hours)}:${pad(minuts)}:${pad(seconds)}`;
+    timeStatus.textContent = timerOfLesons[timerOfLesons.length - 1][1];
+  }
 };
 
 const addNewContent = (dayNum) => {
@@ -90,5 +145,6 @@ btnWednesday.addEventListener("click", () => addNewContent(2));
 btnThursday.addEventListener("click", () => addNewContent(3));
 btnFridey.addEventListener("click", () => addNewContent(4));
 
-setInterval(() => timeNowSeconds(), 1000);
-setInterval(() => timeNow(), 1000);
+// setInterval(() => timeNowSeconds(), 1000);
+// setInterval(() => timeNow(), 1000);
+setInterval(() => changeTimeToLesson(), 1000);
