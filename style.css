@@ -169,16 +169,34 @@ body {
     display: flex;
     justify-content: center;
     margin-block: 20px;
-    gap: 25px;
+    gap: 20px;
 }
 
 button {
-    padding: 10px;
-    color: #cbcbcb;
-    background-color: #144174;
-    border-style: solid;
-    border-color: #eb5c75;
+    display: inline-block;
+    padding: 7px 12px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff5252;
+    border: 2px solid #000;
     border-radius: 10px;
-    font-size: 17px;
-    font-weight: 700;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #144174;
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+button:active {
+    background-color: #fff;
+    color: #ff5252;
+    border: 2px solid #ff5252;
+    box-shadow: 5px 5px 0px #ff5252;
 }
