@@ -16,6 +16,8 @@ const audNum3 = document.querySelector("#leson-aud-3");
 const audNum4 = document.querySelector("#leson-aud-4");
 const audNum5 = document.querySelector("#leson-aud-5");
 
+const timeElement = document.querySelector("#time");
+
 const domElemArr = [
   [lesonName1, audNum1],
   [lesonName2, audNum2],
@@ -62,6 +64,19 @@ const textArr = [
   ],
 ];
 
+const timeNowSeconds = () => {
+  const now = new Date();
+
+  const secondsOfStart =
+    now.getHours() * 60 * 60 + now.getMinutes() * 60 + now.getSeconds();
+  console.log(`Seconds now: ${secondsOfStart}`);
+};
+
+const timeNow = () => {
+  const now = new Date();
+  timeElement.textContent = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+};
+
 const addNewContent = (dayNum) => {
   for (let i = 0; i < domElemArr.length; i++) {
     domElemArr[i][0].textContent = textArr[dayNum][i][0];
@@ -74,3 +89,6 @@ btnTuesday.addEventListener("click", () => addNewContent(1));
 btnWednesday.addEventListener("click", () => addNewContent(2));
 btnThursday.addEventListener("click", () => addNewContent(3));
 btnFridey.addEventListener("click", () => addNewContent(4));
+
+setInterval(() => timeNowSeconds(), 1000);
+setInterval(() => timeNow(), 1000);
