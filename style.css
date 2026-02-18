@@ -168,7 +168,8 @@ body {
 .btn-container {
     display: flex;
     justify-content: center;
-    margin-block: 20px;
+    margin-top: 10px;
+    margin-bottom: 45px;
     gap: 20px;
 }
 
@@ -199,4 +200,15 @@ button:active {
     color: #ff5252;
     border: 2px solid #ff5252;
     box-shadow: 5px 5px 0px #ff5252;
+}
+
+@media (max-width: 450px) {
+    button {
+        font-size: 18px;
+        padding: 7px 11px;
+    }
+
+    .btn-container {
+        gap: 15px;
+    }
 }
